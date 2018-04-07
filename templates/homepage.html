@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>MoneyZone</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid" style="background-color:#ff8900">
+
+   <form action="logi" method="post">
+
+<input type="submit" class="btn btn-primary" style="float:right;position:relative;top:20px" value="Log in ">
+ <div  style="display:inline; float:right">
+    <label for="pwdlogin">Password:</label>
+    <input type="password" class="form-control" style="position:relative;right:8px;bottom:3px" id="pwdlogin" name="pwdlogin">
+  </div>
+<div  style="display:inline; float:right">
+    <label for="Username">Username:</label>
+    <input type="text" class="form-control" style="position:relative;right:15px;bottom:3px" name="Username"id="Username">
+  </div>
+       {% csrf_token %}
+  </form>
+  </div>
+</nav>
+<div class="jumbotron" style="background-color:grey">
+  <h1 style="text-align:center">MoneyZone</h1>
+  <p style="text-align:center">MoneyZone app for transactions</p>
+</div>
+<div style="position: relative;top:70px;left:70px;width:150px">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY3nvEsSTf8tYMliU8hrQiJeEpxxADBNdVEFdOLgvHiGQjthBRiQ" class="rounded" alt="money">
+</div>
+<div class="container-fluid" style="float:right;position:relative;right:100px;bottom:150px">
+<form action="reg" method="post">
+     {% csrf_token %}
+<div class="form-group">
+    <label for="First">First Name:</label>
+    <input type="text" class="form-control" id="First" name="First" style="display:inline">
+  </div>
+<div class="form-group">
+    <label for="Last">Last Name</label>
+    <input type="text" class="form-control" id="Last" name="Last">
+  </div>
+<div class="form-group">
+    <label for="Mob">Mobile</label>
+    <input type="text" class="form-control" id="Mob" name="Mob">
+  </div>
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email" name="email">
+  </div>
+    <div class="form-group">
+    <label for="username">Username:</label>
+    <input type="text" class="form-control" id="username" name="username">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd" name="pwd">
+  </div>
+  <div class="form-group">
+    <label for="cpwd">Confirm Password:</label>
+    <input type="password" class="form-control" id="cpwd" name="cpwd">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+ </body>
+</html>
